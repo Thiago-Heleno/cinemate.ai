@@ -1,6 +1,6 @@
 # 🎬 Cinemate.ai
 
-![Cinemate.ai](https://yourimageurl.com/banner.png)
+![Cinemate.ai](https://i.imgur.com/wLTDjP8_d.webp?maxwidth=760&fidelity=grand)
 
 Welcome to **Cinemate.ai** - Your ultimate AI-powered movie recommendation engine! Leveraging the power of AI, LangChain, and the extensive IMDb database, Cinemate.ai delivers personalized movie recommendations tailored to your preferences. Whether you're in the mood for a classic film, the latest blockbuster, or a hidden gem, Cinemate.ai has you covered.
 
@@ -27,7 +27,7 @@ Before you begin, ensure you have the following installed:
 1. **Clone the Repository**
 
    ```bash
-   git clone https://github.com/tibis0313/Cinemate.ai.git
+   git clone https://github.com/Thiago-Heleno/cinemate.ai
    cd Cinemate.ai
    ```
 
@@ -40,7 +40,7 @@ Before you begin, ensure you have the following installed:
 3. **Run the Application**
 
    ```bash
-   streamlit run app.py
+   streamlit run chat_interface.py
    ```
 
 4. **Enjoy Your Movie Recommendations!**
@@ -80,15 +80,14 @@ Please ensure your pull request adheres to the project's coding standards and in
 
 ## 📜 License
 
-This project is licensed under the Apache License 2.0 - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the Apache License 2.0 - see the [LICENSE](https://www.apache.org/licenses/LICENSE-2.0) file for details.
 
 ## 💬 Contact
 
 For questions, suggestions, or feedback, feel free to reach out:
 
-- **Email**: your.email@example.com
-- **Twitter**: [@yourhandle](https://twitter.com/yourhandle)
-- **GitHub**: [yourusername](https://github.com/yourusername)
+- **Email**: tibis0313@gmail.com
+- **GitHub**: [yourusername](https://github.com/Thiago-Heleno)
 
 ## 🎥 Acknowledgements
 
@@ -99,5 +98,3 @@ For questions, suggestions, or feedback, feel free to reach out:
 ---
 
 Dive into the world of movies with **Cinemate.ai** and never run out of great films to watch!
-
-![Cinemate.ai](https://yourimageurl.com/footer.png)
