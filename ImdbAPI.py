@@ -31,8 +31,8 @@ class ImdbAPI():
       print(f"Additional positional arguments: {args}")
     if kwargs:
       print(f"Additional keyword arguments: {kwargs}")
-            
-    r = requests.get('https://www.imdb.com/search/title/?genres=romance&sort=num_votes,desc', stream=True, headers=headers)
+      
+    r = requests.get(f'https://www.imdb.com/search/title/?genres={query}&sort=num_votes,desc', stream=True, headers=headers)
 
     # Save to .txt file
     # if r.status_code == 200:
@@ -58,8 +58,21 @@ class ImdbAPI():
             
             response_json = json.loads(next_data_content)
             
-            return str(response_json['props']['pageProps']['searchResults']['titleResults']['titleListItems'])
-            
+            data_str = str(response_json['props']['pageProps']['searchResults']['titleResults']['titleListItems'])
+          
+            # Convert the string to a list of dictionaries
+            data_list = eval(data_str)
+
+            # Remove unnecessary fields
+            for item in data_list:
+                keys_to_remove = ['canRate', 'titleId', 'titleType', 'primaryImage', 'hasWatchOption', 'ratingSummary', 'topCast', 'creators', 'directors', 'endYear']
+                for key in keys_to_remove:
+                    item.pop(key, None)
+
+            # Convert the cleaned data back to JSON for better readability
+            cleaned_data = json.dumps(data_list, indent=4, ensure_ascii=False)
+            return str(cleaned_data)
+
         else:
             print("No script tag with id '__NEXT_DATA__' found.")
     else:
